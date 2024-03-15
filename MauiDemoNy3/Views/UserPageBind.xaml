@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoNy3.Views.UserPageBind"
+             Title="UserPageBind">
+    <VerticalStackLayout>
+        <Label 
+            Text="User - via bindings"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="{Binding TheUser.name,StringFormat='Hej {0}'}"
+            HorizontalOptions="Center"/>
+        <Label 
+            Text="{Binding TheUser.address}"
+            HorizontalOptions="Center"/>
+        <Label
+            Text="{Binding TheUser.username}"
+            HorizontalOptions="Center"/>
+
+        <Label
+            Text="{Binding TheUser.email}"
+            HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

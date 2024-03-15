@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoNy3.Views.ShopPage"
+             Title="ShopPage">
+    <VerticalStackLayout>
+        <Image Source="{Binding Shop.HeaderImageSource}"
+               HeightRequest="250"></Image>
+        <Label Text="{Binding Shop.Title}" HorizontalOptions="Center"></Label>
+
+        <ListView ItemsSource="{Binding Products}" ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10"
+                              RowDefinitions="Auto, *"
+                              ColumnDefinitions="200, *"
+                              ColumnSpacing="20">
+                            <Image Grid.RowSpan="2"
+                                   Source="{Binding ImageSource}"
+                                   HeightRequest="200"></Image>
+                            <Label Grid.Column="1"
+                                   Text="{Binding ProductName}"
+                                   FontSize="32"></Label>
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Price, StringFormat='{0} kr'}"
+                                   FontSize="15"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

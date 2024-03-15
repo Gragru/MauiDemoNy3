@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoNy3.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+               x:Name="Clock"
+               Style="{StaticResource Headline}"
+               VerticalOptions="Center"/>
+            <Button Text="Starta klockan"
+                    HorizontalOptions="Center"
+                    Clicked="OnClickedClock"/>
+
+            <Button
+                Text="Visa användare"
+                Clicked="OnClickedGoUserPage"/>
+
+            <Button
+                Text="Visa användare via bindings"
+                Clicked="OnClickedGoUserPageBind"/>
+
+            <Button Text="Shoppen"
+                    Clicked="OnClickedGoShopPage"></Button>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

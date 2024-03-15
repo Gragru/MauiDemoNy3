@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoNy3.Views.UserPage"
+             Title="UserPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Slumpmässig användare: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            x:Name="Username"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            x:Name="Name"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            x:Name="Address"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button Text="Hämta en användare"
+                HorizontalOptions="Center"
+                Clicked="OnClickedGetUser"/>
+
+    </VerticalStackLayout>
+</ContentPage>
